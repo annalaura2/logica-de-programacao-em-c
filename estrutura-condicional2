@@ -1,0 +1,16 @@
+#include <stdio.h> 
+
+// ler dois numeros e mostrar o menor
+
+int main(){
+    float n1, n2; 
+
+    printf("Informe os dois numeros\n"); 
+    scanf("%f" "%f", &n1, &n2);
+
+    if(n1 < n2){
+        printf("Menor numero: " "%2.f\n", n1);
+    }else{
+        printf("Menor numero: " "%2.f\n", n2);
+    }
+}
