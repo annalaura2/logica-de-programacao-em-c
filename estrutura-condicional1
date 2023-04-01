@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+//ler dois numeros e mostrar o maior 
+
+int main(){
+
+    float n1, n2; 
+
+    printf("Informe os numeros\n"); 
+    scanf("%f" "%f", &n1, &n2); 
+
+    if(n1 > n2){
+        printf("Maior numero: " "%2.f\n", n1);
+    }else{
+        printf("Menor numero: " "%2.f\n", n2);
+    }
+}
