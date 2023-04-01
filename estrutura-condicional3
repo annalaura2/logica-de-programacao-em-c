@@ -1,0 +1,44 @@
+#include <stdio.h>
+// Ler dois numeros e dar a opção para o usuário realizar alguma operação (divisão, produto, diferença ou média com eles)
+
+
+int main(){
+
+    float n1, n2, maiorNumero, media, menorNumero;
+    int tipoDeOp;
+
+    printf("Informe os dois numeros\n"); 
+    scanf("%f" "%f", &n1, &n2); 
+
+    if(n1 > n2){
+        maiorNumero = n1;
+        menorNumero = n2;
+
+    }else{
+        maiorNumero = n2;
+        menorNumero = n1;
+    }
+
+    printf("Qual operacao deseja efetuar\? Digite 1 para MEDIA, 2 para DIFERENCA entre o MAIOR numero e o MENOR numero, 3 para o PRODUTO e 4 para DIVISAO\n"); 
+    scanf("%d", &tipoDeOp);
+
+    if(tipoDeOp == 1){
+        printf("Media: " "%2.f\n" , ((n1+n2)/2));
+    }else{
+        if(tipoDeOp == 2){
+            printf("SUBTRACAO: " "%2.f\n", maiorNumero - menorNumero);
+        }else{
+            if(tipoDeOp == 3){
+                printf("PRODUTO: ""%2.f\n", n1*n2);
+            }else{
+                if(tipoDeOp == 4 && n1 != 0 && n2 != 0){
+                    printf("DIVISAO: " "%2.f\n", n1/n2);
+
+                }else{
+                    
+                    printf("Erro\n");
+                }
+            }
+        }
+    }
+}
