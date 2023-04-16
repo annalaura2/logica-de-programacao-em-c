@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+/*) Considere um escritório de arquitetura. O preço cobrado por um projeto arquitetônico básico
+é de R$ 20,00 por m2
+. Se o cliente quiser acrescentar os projetos complementares, o preço
+será de R$ 30,00 por m2
+. O cliente pode ainda acrescentar o projeto de decoração e/ou o
+projeto estrutural. Pelo projeto de decoração é cobrado R$ 100,00 por cômodo e pelo projeto
+estrutural é cobrado R$ 1200,00. Se o cadastro do cliente tiver sido feito pela internet, o
+valor total receberá um desconto de 5%. Elabore um algoritmo que mostre o valor a ser
+pago.*/
+
+int main()
+{
+    float metrosDoProjeto, totalDoProjeto;
+    int projeto, projetoC, comodos, internet;
+
+    printf("Informe os metros cubicos do projeto\n");
+    scanf("%f", &metrosDoProjeto);
+    printf("Para projeto basico digite 1 e para projetos complementares digite 2\n");
+    scanf("%d", &projeto);
+    printf("Quantos comodos tera o projeto\?\n");
+    scanf("%d", &comodos);
+    printf("Digite 1 para adicionar projeto de DECORACAO, digite 2 para adicionais projetos ESTRUTURAIS ou digite 3 para adicionar ambos\n");
+    scanf("%d", &projetoC);
+    printf("O cadastro esta sendo feito pela internet\? Digite 1 para sim e 2 para nao\n");
+    scanf("%d", &internet);
+
+    if (projeto == 1)
+    {
+        totalDoProjeto = metrosDoProjeto * 20;
+    }
+    else
+    {
+        if (projeto == 2)
+        {
+            totalDoProjeto = metrosDoProjeto * 30;
+        }
+        else
+        {
+            printf("Erro\n");
+        }
+    }
+
+    if (projetoC == 1)
+    {
+        totalDoProjeto = (comodos * 100) + totalDoProjeto;
+    }
+    else
+    {
+        if (projetoC == 2)
+        {
+            totalDoProjeto = totalDoProjeto + 1200;
+        }
+        else
+        {
+            if (projetoC == 3)
+            {
+                totalDoProjeto = (comodos * 100) + 1200 + totalDoProjeto;
+            }
+            else
+            {
+                print("Erro\n");
+            }
+        }
+    }
+
+    if (internet == 1)
+    {
+        totalDoProjeto = totalDoProjeto - (totalDoProjeto * 0.5);
+    }
+    else
+    {
+        if (internet == 2)
+        {
+            totalDoProjeto = totalDoProjeto;
+        }
+        else
+        {
+            printf("Erro\n");
+        }
+    }
+
+    printf("VALOR DO PROJETO: %2.f\n", totalDoProjeto);
+}
