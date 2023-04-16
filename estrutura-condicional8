@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+/*11) Calcule o preço a ser pago por uma compra pela internet com as seguintes condições. Dada
+a soma dos preços dos itens da compra, o frete será 10% deste valor para a região sul e
+sudeste e 20% para as demais regiões, mas se a compra for feita em dia de promoção, o frete
+será grátis. Se o cliente for um cliente vip, receberá R$ 100,00 de desconto no valor da
+compra.*/
+
+int main()
+{
+    float somaDosProdutos, valorASerPago;
+    int regiao, diaDePromocao, clienteVip;
+
+    printf("Informe a soma dos produtos\n");
+    scanf("%f", &somaDosProdutos);
+    printf("Qual regiao o pedido sera enviado\? Digite 1 SUL ou para SUDESTE e 2 para DEMAIS REGIOES\n");
+    scanf("%d", &regiao);
+    printf("E dia de promocao\? Digite 1 para SIM\n");
+    scanf("%d", &diaDePromocao);
+    printf("E cliente vip\? Digite 1 para SIM\n");
+    scanf("%d", &clienteVip);
+
+    if (regiao == 1)
+    {
+        valorASerPago = (somaDosProdutos * 0.1) + somaDosProdutos;
+    }
+    else
+    {
+        if (regiao == 2)
+        {
+            valorASerPago = (somaDosProdutos * 0.2) + somaDosProdutos;
+        }
+        else
+        {
+            printf("ERRO\n");
+        }
+    }
+
+    if (diaDePromocao == 1)
+    {
+        valorASerPago = somaDosProdutos;
+    }
+
+    if (clienteVip == 1)
+    {
+        valorASerPago = valorASerPago - 100;
+    }
+
+    printf("VALOR A SER PAGO: %2.f\n", valorASerPago);
+}
