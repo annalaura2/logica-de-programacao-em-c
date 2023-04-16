@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+/*8. Modifique o programa do item anterior de forma que no final informe quantos são maiores,
+quantos são menores, quantos tem idade entre 20 e 25, quantos tem mais de 60 anos, a
+média das idades, se esta média é menor que 21 e (DESAFIO) a idade do mais velho.*/
+
+int main()
+{
+    int idade, maioresDeIdade = 0, menoresDeIdade = 0, i, idadeEntre20e25 = 0, maisDe60 = 0, contIdades = 0, idadeDoMaisVelho = 0;
+    float mediaDasIdades;
+
+    for (i = 0; i <= 12; i++)
+    {
+        printf("Informe sua idade\n");
+        scanf("%d", &idade);
+        contIdades = contIdades + idade;
+
+        if (idade < 18)
+        {
+            printf("MENOR DE IDADE\n");
+            menoresDeIdade++;
+        }
+        else
+        {
+            printf("MAIOR DE IDADE\n");
+            maioresDeIdade++;
+        }
+
+        if (idade >= 20 && idade <= 25)
+        {
+            idadeEntre20e25++;
+        }
+
+        if (idade > 60)
+        {
+            maisDe60++;
+        }
+
+        if (idade > idadeDoMaisVelho)
+        {
+            idadeDoMaisVelho = idade;
+        }
+    }
+
+    mediaDasIdades = contIdades / 13;
+
+    if (mediaDasIdades < 21)
+    {
+        printf("MEDIA DAS IDADES E MENOR QUE 21\n");
+    }
+    printf("MEDIA DAS IDADES: %d", mediaDasIdades);
+    printf("MAIORES DE IDADE: %d\n", maioresDeIdade);
+    printf("MENORES DE IDADE: %d", menoresDeIdade);
+    printf("Idade entre 20 e 25: %d", idadeEntre20e25);
+    printf("Idade maior que 60: %d", maisDe60);
+}
