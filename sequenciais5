@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+/*5. Mostre a média final de cada aluno, de uma turma de 10 alunos, e diga se ele passou direto
+(media ≥ 7,0) ou não, dadas as notas de 1º e de 2º bimestres.*/
+
+int main()
+{
+    int i;
+    float nota1, nota2, mediaFinal;
+
+    for (i = 0; i <= 9; i++)
+    {
+        printf("Informe, respectivamente, a nota 1 e a nota 2\n");
+        scanf("%f""%f",&nota1, &nota2);
+        mediaFinal = (nota1 + nota2) / 2;
+
+        if (mediaFinal >= 7)
+        {
+            printf("Passou direto\n");
+        }
+        else
+        {
+            printf("Nao passou direto\n");
+        }
+    }
+}
