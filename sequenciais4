@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+/*4. Mostre para cada pessoa, de um conjunto de 15 pessoas, se está acima do peso, abaixo do
+peso ou peso ideal.
+Considere
+Peso ideal para homens: IMC de 19 a 25
+Peso ideal para mulheres: IMC de 18 a 24,5
+IMC = P/H²
+, onde P é o peso em kg e H é a altura em m*/
+int main(){
+    int i, generoDaPessoa;
+    float peso, altura, imc; 
+
+    for(i = 0; i <= 2; i++){
+        printf("Informe seu peso\n"); 
+        scanf("%f", &peso);
+        printf("Informe sua altura\n"); 
+        scanf("%f", &altura); 
+        imc = peso/(altura*altura);
+        printf("Informe o genero, digite 1 para feminino e 2 para masculino\n");
+        scanf("%d", &generoDaPessoa);
+        if(generoDaPessoa == 1){
+                if(imc < 18){
+                    printf("Abaixo do peso\n");
+                }else{
+                    if(imc > 24.5){
+                        printf("Acima do peso\n");
+                    }else{
+                        printf("Peso ideal\n");
+                    }
+                }
+            
+        }else{
+            if(imc < 19){
+                printf("Abaixo do peso\n");
+            }else{
+                if(imc > 25){
+                    printf("Acima do peso\n");
+                }else{
+                    printf("Peso ideal\n");
+                }
+            }
+        }
+
+    }
+}
