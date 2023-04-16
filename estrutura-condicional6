@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+/*Elabore um algoritmo que calcule o preço de um terreno de acordo com as seguintes regras:
+Se estiver na região Sul, R$150,00 por m2 e se estiver na região Norte, R$ 100,00 por m2
+.
+Caso o terreno tenha mais de 400 m2
+, este preço terá 25% de acréscimo. Se for um terreno
+de esquina, acrescenta-se R$ 600,00 no preço.*/
+int main()
+{
+    int regiao, maisDe400m, terrenoDeEsquina;
+    float valorDoTerreno, metrosDoTerreno;
+
+    printf("Informe os metros cubicos do terreno\n");
+    scanf("%f", &metrosDoTerreno);
+    printf("Em qual regiao o terreno esta localizado\? Digite 1 para SUL e 2 para NORTE\n");
+    scanf("%d", &regiao);
+    printf("O terreno e de esquina\?Digite 1 para SIM\n");
+    scanf("%d", &terrenoDeEsquina);
+
+    if (regiao == 1)
+    {
+        valorDoTerreno = metrosDoTerreno * 150;
+    }
+    else
+    {
+        if (regiao == 2)
+        {
+            valorDoTerreno = metrosDoTerreno * 100;
+        }
+        else
+        {
+            printf("Erro\n");
+        }
+    }
+
+    if (metrosDoTerreno > 400)
+    {
+        valorDoTerreno = (valorDoTerreno * 0.25) + valorDoTerreno;
+    }
+
+    if (terrenoDeEsquina == 1)
+    {
+        valorDoTerreno = valorDoTerreno + 600;
+    }
+
+    printf("VALOR DOR TERRENO: %2.f\n", valorDoTerreno);
+}
