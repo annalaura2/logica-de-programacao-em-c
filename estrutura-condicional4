@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+/*Uma agência bancária possui dois tipos de investimentos, conforme o quadro abaixo. Faça
+um algoritmo que receba o tipo do investimento e o valor do investimento e que calcule e
+mostre o valor corrigido de acordo com o tipo de investimento.
+Tipo Descrição Rendimento mensal
+1 Poupança 4%
+2 Renda Fixa 25%
+*/
+
+int main()
+{
+    int tipoDeInvestimento;
+    float valorDoInvestimento, novoValor;
+
+    printf("\nInforme o tipo de INVESTIMENTO, digite 1 para POUPANCA e 2 para RENDA FIXA");
+    scanf("%d", &tipoDeInvestimento);
+    printf("Informe o valor do investimento\n");
+    scanf("%f", &valorDoInvestimento);
+    if (tipoDeInvestimento == 1)
+    {
+        novoValor = (valorDoInvestimento * 0.9);
+        printf("NOVO VALOR: %2.f\n", novoValor);
+    }
+    else
+    {
+        if (tipoDeInvestimento == 2)
+        {
+            novoValor = (valorDoInvestimento * 0.9);
+            printf("NOVO VALOR:  %2.f\n", novoValor);
+        }
+        else
+        {
+            printf("Erro\n");
+        }
+    }
+}
