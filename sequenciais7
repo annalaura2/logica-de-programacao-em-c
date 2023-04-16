@@ -1,0 +1,25 @@
+#include <stdio.h> 
+
+/*7. Elabore um algoritmo que leia a idade de 13 pessoas e mostre, para cada entrada, a
+mensagem "Maior de idade" ou "Menor de idade". No final informe quantos são maiores e
+quantos são menores.*/
+
+int main(){
+    int idade, maioresDeIdade, menoresDeIdade, i; 
+
+    for(i = 0; i <= 12; i++){
+        printf("Informe sua idade\n"); 
+        scanf("%d", &idade); 
+
+        if(idade < 18){
+            printf("MENOR DE IDADE\n"); 
+            menoresDeIdade++;
+        }else{
+            printf("MAIOR DE IDADE\n"); 
+            maioresDeIdade++;
+        }
+    }
+
+    printf("MAIORES DE IDADE: %d\n", maioresDeIdade); 
+    printf("MENORES DE IDADE: %d", menoresDeIdade);
+}
