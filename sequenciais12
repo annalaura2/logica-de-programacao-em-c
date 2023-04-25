@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+/*6. Escreva no monitor a tabuada de multiplicação do 5. (faça com o for.*/
+
+int main(){
+    int i, numero = 0; 
+
+    for(i = 0; i <= 9; i++){
+        numero = numero + 1;
+        printf("5 x" " %d = " "%d\n" , numero, numero*5);
+    }
+    
+}
