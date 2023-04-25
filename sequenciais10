@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+/*2. Leia um número indeterminado de idades e diga para cada uma se é maior ou menor de idade.
+Ao final, informe o número de entradas de dados que foram processadas acrescente a media das idades.*/
+
+int main(){
+    int idade, contIdades = 0, acumuladorIdades = 0;
+    char op;
+    float mediaDasIdades;
+    do{
+        printf("Digite sua idade\n");
+        scanf("%d", &idade); 
+
+        if(idade >= 18){
+            printf("Maior de idade\n");
+        }else{
+            printf("Menor de idade\n");
+        }
+        acumuladorIdades = idade + acumuladorIdades;
+        contIdades = contIdades + 1;
+        printf("Deseja continuar\? Digite s para SIM e n para NAO\n");
+        scanf(" %s", &op);
+    }while(op != 'n');
+
+    mediaDasIdades = acumuladorIdades/contIdades;
+    printf("Cont idades: %d\n", contIdades);
+    printf("Media idades: %2.f\n", mediaDasIdades);
+    
+}
