@@ -1,0 +1,20 @@
+#include <stdio.h> 
+
+/*7. Escreva no monitor a tabuada de multiplicação de um número fornecido pelo usuário. (faça
+com o while*/ 
+
+int main(){
+    int numero, contNumeros = 0; 
+    float divisao; 
+
+    printf("Informe o numero\n"); 
+    scanf("%d", &numero);
+
+    while(numero > 0){
+        contNumeros = contNumeros + 1; 
+        printf("%d x" " %d = " "%d\n",numero, contNumeros, numero*contNumeros);
+        if((numero*contNumeros) % 10 == 0){
+            break;
+        }
+    }
+}
