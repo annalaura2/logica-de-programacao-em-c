@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+/*8. Escreva no monitor a tabuada de multiplicação do 2 ao 10. (faça com o for*/
+
+int main()
+{
+    int i, contNumeros = 1, multiplicados = 0, j;
+
+    for (i = 0; i <= 9; i++)
+    {
+        contNumeros = contNumeros + 1;
+        for (j = 0; j <= 10; j++)
+        {
+            printf("%d x"" %d ="" %d\n",contNumeros, multiplicados, contNumeros * multiplicados);
+            multiplicados = multiplicados + 1;
+            if(multiplicados  > 10){
+                multiplicados = 0;
+            }
+        }
+    }
+}
