@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+/*O mesmo exercício anterior, mas agora não será informado o número de mercadorias em
+estoque. Então o funcionamento deverá ser da seguinte forma: ler o valor da mercadoria e
+perguntar ‘MAIS MERCADORIAS (S/N)?’. Ao final, imprimir o valor total em estoque e a
+média de valor das mercadorias em estoque.*/
+
+int main()
+{
+    int contMercadorias = 0;
+    float mediaValoresDaMercadoria, valorDaMercadoria, contValores = 0;
+    char op;
+
+    do
+    {
+        printf("Informe o valor dessa mercadoria\n");
+        scanf("%f", &valorDaMercadoria);
+        contMercadorias++;
+        contValores = contValores + valorDaMercadoria;
+        printf("MAIS MERCADORIAS\? (S/N)\n");
+        scanf(" %s", &op);
+    } while (op != 'n');
+
+    mediaValoresDaMercadoria = (contValores / contMercadorias);
+    printf("MEDIA VALORES: %2.f\n", mediaValoresDaMercadoria);
+    printf("MERCADORIAS EM ESTOQUE: %d\n", contMercadorias);
+}
