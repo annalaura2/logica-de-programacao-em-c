@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+/*Ler 2 valores inteiros, calcular e escrever a soma dos inteiros existentes entre os 2 valores lidos
+(incluindo os valores lidos na soma). Considere que o segundo valor deve ser sempre maior
+que o primeiro. Se não for, uma nova leitura deve ser feita.*/
+
+int main()
+{
+    int n1, n2, i, soma = 0;
+
+    printf("Informe os dois numeros\n");
+    scanf("%d""%d", &n1, &n2);
+
+    if (n2 > n1)
+    {
+        for (i = n1; i <= n2; i++)
+        {
+            soma = i + soma;
+        }
+        printf("SOMA: %d\n", soma);
+    }
+    else
+    {
+        printf("Erro, digite novamente os dois numeros\n");
+        scanf("%d""%d",&n1, &n2);
+        for (i = n1; i <= n2; i++)
+        {
+            soma = i + soma;
+        }
+        printf("SOMA: %d\n", soma);
+    }
+}
