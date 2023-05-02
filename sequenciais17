@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/*12. Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive).
+Considere que o N deve ser sempre maior que ZERO. Caso o valor informado não seja maior
+que 0, deverá ser lido um novo valor para N.*/
+
+int main()
+{
+    int numero, i;
+
+    printf("Informe o numero\n");
+    scanf("%d", &numero);
+    if (numero < 0)
+    {
+        printf("Informe um novo numero\n");
+    }
+    else
+    {
+        for (i = 1; i <= numero; i++)
+        {
+            printf("%d\n", i);
+        }
+    }
+}
