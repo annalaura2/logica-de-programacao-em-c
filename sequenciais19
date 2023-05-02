@@ -1,0 +1,30 @@
+nclude <stdio.h>
+
+/*. Uma loja está levantando o valor total de todas as mercadorias em estoque. Escreva um
+algoritmo que permita a entrada das seguintes informações: o número total de mercadorias no
+estoque e o valor de cada mercadoria. Ao final imprimir o valor total em estoque e a média de
+valor das mercadorias*/
+
+int main()
+{
+    int numeroDeMercadorias, contMercadorias = 0;
+    float mediaValoresDaMercadoria, valorDaMercadoria, totalMercadoria = 0, contValores = 0;
+    char op;
+
+    do
+    {
+        printf("Informe o numero total de mercadorias\n");
+        scanf("%d", &numeroDeMercadorias);
+        contMercadorias = numeroDeMercadorias + contMercadorias;
+        printf("Informe o valor dessa mercadoria\n");
+        scanf("%f", &valorDaMercadoria);
+        contValores = contValores + valorDaMercadoria;
+        totalMercadoria = numeroDeMercadorias * valorDaMercadoria;
+        printf("Deseja adicionar mais mercadorias\? Digite s para SIM e n para NAO\n");
+        scanf(" %s", &op);
+    } while (op != 'n');
+
+    mediaValoresDaMercadoria = (contValores / contMercadorias);
+    printf("TOTAL EM ESTOQUE: %d\n", contMercadorias);
+    printf("MEDIA DOS VALORES: %2.f\n", mediaValoresDaMercadoria);
+}
