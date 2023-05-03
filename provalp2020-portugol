@@ -13,8 +13,8 @@ cardíaca são valores reais.
 
 Algoritmo 
 
-	inteiro atleta, idade, semana, percent16 = 0, percent25 = 0, contOxigenio = 0, contMediaAbaixoDe96 = 0
-	real nivelDeOxigenio, frequenciaCardiaca, mediaOxigenio, somaOxigenio = 0, maiorFreqCardiaca = 0
+	inteiro atleta, idade, semana, percent16 = 0, percent25 = 0, contOxigenio = 0, contMediaAbaixoDe96 = 0;
+	real nivelDeOxigenio, frequenciaCardiaca, mediaOxigenio, somaOxigenio = 0, maiorFreqCardiaca = 0;
 
 
 	para(atleta = 1; atleta <= 10; atleta = atleta + 1)
