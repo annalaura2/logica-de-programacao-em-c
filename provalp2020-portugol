@@ -1,0 +1,60 @@
+
+
+Enunciado: 10 atletas foram monitorados por 8 semanas. Para cada atleta foram registrados sua idade, várias
+medições do nível de oxigênio no sangue e medições semanais de frequência cardíaca. Elabore um
+algoritmo que, para cada atleta, mostre seu nível médio de oxigênio no sangue e a maior
+frequência cardíaca registrada durante o período de monitoramento. No final mostre ainda
+quantos tiveram a média de oxigênio no sangue abaixo de 96 e a percentagem de atletas com
+mais de 25 anos e a percentagem com menos de 16 anos.
+obs.: Na leitura das medições de nível de oxigênio no sangue, utilize o valor -1 para indicar que a
+sequência de medições finalizou (o valor -1 na entrada é o código para a parada da estrutura de
+repetição e não deve ser processado). Considere que os valores de nível de oxigênio e frequência
+cardíaca são valores reais.
+
+Algoritmo 
+
+	inteiro atleta, idade, semana, percent16 = 0, percent25 = 0, contOxigenio = 0, contMediaAbaixoDe96 = 0
+	real nivelDeOxigenio, frequenciaCardiaca, mediaOxigenio, somaOxigenio = 0, maiorFreqCardiaca = 0
+
+
+	para(atleta = 1; atleta <= 10; atleta = atleta + 1)
+		leia(idade);
+		se(idade > 25)
+			percent25 = percent25 + 1;
+		senao
+			se(idade < 16)
+				percent16 = percent16 + 1;
+			fimse;
+		fimse; 
+		
+		leia(nivelDeOxigenio);
+		
+		faça
+
+			contOxigenio = contOxigenio + 1; 
+			somaOxigenio = oxigenio + somaOxigenio;
+		
+		enquanto(nivelDeOxigenio != -1);
+		
+		mediaOxigenio = somaOxigenio/contOxigenio;
+		
+		se(mediaOxigenio < 96)
+			contMediaAbaixoDe96 = contMediaAbaixoDe96 + 1; 
+		fimse; 
+		
+		para(semana = 1; semana <= 8; semana = semana + 1)
+			leia(frequenciaCardiaca);
+			
+			se(frequenciaCardiaca > maiorFreqCardiaca)
+				maiorFreqCardiaca = frequenciaCardiaca; 
+			fimse;
+			
+		fimpara;
+	escreva(mediaOxigenio, maiorFreqCardiaca);
+	fimpara;
+
+	escreva(contMediaAbaixoDe96, percent16/10, percent25/10);
+	
+	
+	
+Fim.
