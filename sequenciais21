@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+/*5) Uma agência de turismo oferece pacotes com as seguintes condições:
+Estadia: R$ 100,00 a cada dia por pessoa.
+Cada passagem: R$ 50,00 por milha de distância.
+Translado aeroporto-hotel: R$ 60,00 o grupo.
+Se o grupo tiver de 4 a 9 pessoas, recebe um desconto de 5% no total do pacote. Se o
+grupo tiver 10 ou mais, recebe um desconto de 10% no total do pacote.
+Elabore um algoritmo para calcular o preço final do pacote. O final perguntar se o cliente
+quer fazer outro orçamento.*/
+
+int main()
+{
+    int quantidadeDePessoas, dias;
+    float milhasDeDistancia, total, desconto;
+    char op;
+
+    do
+    {
+        printf("Informe a quantidade de pessoas\n");
+        scanf("%d", &quantidadeDePessoas);
+
+        printf("Informe a quantidade de milhas de distancia\n");
+        scanf("%f", &milhasDeDistancia);
+
+        total = (quantidadeDePessoas * 100) + (milhasDeDistancia * 50) + 60;
+        if (quantidadeDePessoas >= 4)
+        {
+            desconto = total * 0.05;
+            printf("Valor Total: %2.f\n", total - desconto);
+        }
+        else
+        {
+            if (quantidadeDePessoas >= 10)
+            {
+                desconto = total * 0.1;
+                printf("Valor Total: %2.f\n", total - desconto);
+            }
+            else
+            {
+                printf("Valor Total: %2.f\n", total);
+            }
+        }
+        printf("Deseja continuar\? Digite s para sim e n para nao\n");
+        scanf(" %s", &op);
+    } while (op != 'n');
+}
