@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/*1 Leia 10 números inteiros e, após as leituras, mostre todos os valores na tela*/
+
+int main()
+{
+    int numeros[10], i;
+
+    for (i = 0; i <= 9; i++)
+    {
+        printf("Informe o numero\n");
+        scanf("%d", &numeros[i]);
+    }
+
+    for (i = 0; i <= 9; i++)
+    {
+        printf("%d\n", numeros[i]);
+    }
+}
