@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/*2 Ler 20 valores reais, somar cada valor lido com uma constante fornecida pelo usuário e,
+logo após, mostrar os resultados*/
+
+int main()
+{
+    int numeros[20], constante, i;
+
+    printf("Informe a constante que deseja somar os numeros\n");
+    scanf("%d", &constante);
+
+    for (i = 0; i <= 19; i++)
+    {
+        printf("Informe o numero\n");
+        scanf("%d", &numeros[i]);
+    }
+
+    for (i = 0; i <= 19; i++)
+    {
+        printf("%d + ""%d = ""%d\n",numeros[i], constante, numeros[i] + constante);
+    }
+}
