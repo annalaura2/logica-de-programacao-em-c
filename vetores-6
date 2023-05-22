@@ -1,0 +1,21 @@
+#include <stdio.h> 
+#include <string.h>
+/* Ler nome e idade de 13 pessoas, após as leituras mostrar todos os nomes, suas idades e
+quem é o mais velho.*/
+
+void main (){
+    int i, j, idade[13], maior = 0;
+    char nome[10][13], maisVelho[10];
+
+        for (j = 0; j<13; j++){
+                printf("\nNome %d:", j+1);
+                scanf("%s", &nome[j]);
+                printf("Idade %d:", j+1);
+                scanf("%d", &idade[j]);
+                if (idade[j] > maior){
+                    maior = idade[j];
+                    strcpy (maisVelho, nome[j]);
+                }
+        }
+        printf("O mais velho � %s", maisVelho);
+}
