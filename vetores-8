@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+/*2. Faça um programa com um vetor de números reais (float) de tamanho 5 (com
+qualquer número a sua escolha) e imprima-os no terminal dessa forma (utilizar
+laço de repetição for):
+Elemento 5 do vetor: 5.55
+…
+Elemento 1 do vetor: 65.158*/
+
+int main()
+{
+    float numeros[5];
+    int i;
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("Informe o numero\n");
+        scanf("%f", &numeros[i]);
+    }
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("Elemento %d do vetor: %f\n", i + 1, (float)numeros[i]);
+    }
+}
