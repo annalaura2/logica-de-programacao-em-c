@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+/*4 Ler a idade de 13 pessoas, mostrar a média das idades, o número de pessoas com idade
+abaixo da média e o número de menores de idade.*/
+
+int main()
+{
+    int i, idade[13], contIdades, menoresDeIdade, idadesAbaixoDaMedia;
+    float mediaDasIdades;
+
+    contIdades = 0;
+    menoresDeIdade = 0;
+    idadesAbaixoDaMedia = 0;
+
+    for (i = 0; i < 13; i++)
+    {
+        printf("Informe sua idade\n");
+        scanf("%d", &idade[i]);
+        contIdades = idade[i] + contIdades;
+
+        if (idade[i] < 18)
+        {
+            menoresDeIdade = menoresDeIdade + 1;
+        }
+    }
+
+    mediaDasIdades = contIdades / 13;
+    for (i = 0; i < 13; i++)
+    {
+        if (idade[i] < mediaDasIdades)
+        {
+            idadesAbaixoDaMedia = idadesAbaixoDaMedia + 1;
+        }
+    }
+
+    printf("MEDIA DAS IDADES: %2.f\n", mediaDasIdades);
+    printf("MENORES DE IDADE: %d\n", menoresDeIdade);
+    printf("IDADES ABAIXO DA MEDIA: %d\n", idadesAbaixoDaMedia);
+}
