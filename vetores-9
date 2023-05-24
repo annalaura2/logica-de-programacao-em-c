@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+/*3. Faça um programa com um vetor de números inteiros de tamanho 20, (os
+elementos do vetor devem ser os números de 1 a 20) e imprima-os no terminal
+dessa forma (utilizar laço de repetição for):
+Vetor: 1 2 3 4 5 … 20*/
+
+int main(){
+    int numeros[20], i;
+
+    printf("Vetor: "); 
+    
+    for(i = 1; i <= 20; i++){
+        numeros[i] = i;
+        printf("%d", numeros[i]);
+    }
+}
