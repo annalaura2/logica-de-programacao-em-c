@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/*4 Faça um programa com um vetor strings com nome de pessoas (de tamanho
+5) e imprima-os no terminal dessa forma (utilizar laço de repetição for):
+Lista de pessoas:
+Nome 0: Fulano
+…
+Nome 4: Ciclano*/
+
+int main()
+{
+    char nome[5][20] = {"ANNA", "SARAH", "ISA", "CLARISSA", "TAYLOR SWIFT"};
+    int i;
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("nome %d: %s\n", i, nome[i]);
+    }
+}
