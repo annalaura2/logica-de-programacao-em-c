@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+/*7. Faça um programa que calcula a média dos elementos de um vetor de
+números inteiros lidos pelo usuário (vetor de tamanho 5). Imprima a média dos
+elementos do vetor. Utilizar laço de repetição while.*/
+
+int main()
+{
+    int i, contNumeros, numeros[5];
+    float media;
+    contNumeros = 0;
+    i = 0;
+
+    while (i < 5)
+    {
+        i = i + 1;
+        printf("Informe o numero\n");
+        scanf("%d", &numeros[i]);
+        contNumeros = contNumeros + numeros[i];
+    }
+
+    media = (contNumeros / i);
+    printf("MEDIA: %2.f\n", media);
+}
