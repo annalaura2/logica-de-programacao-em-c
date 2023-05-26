@@ -1,0 +1,45 @@
+
+/*Faça um programa que leia cinco números inteiros e armazene-os em um
+vetor. Imprima o vetor na ordem crescente.
+Vetor em ordem crescente: 3 5 20 45 80*/
+
+#include <stdio.h>
+
+int main()
+{
+
+    int vetor_numeros[5], i, j, k, aux;
+
+    i = 0;
+    j = 0;
+    k = 0;
+    aux = 0;
+
+    while (i < 5)
+    {
+        printf("Digite um numero: \n");
+        scanf("%d", &vetor_numeros[i]);
+        i++;
+    }
+
+    for (j = 0; j < 5; j++)
+    {
+        for (k = j + 1; k < 5; k++)
+        {
+            if (vetor_numeros[j] > vetor_numeros[k])
+            {
+                aux = vetor_numeros[j];
+                vetor_numeros[j] = vetor_numeros[k];
+                vetor_numeros[k] = aux;
+            }
+        }
+    }
+
+    printf("\nVetor em ordem crescente: ");
+    for (i = 0; i < 5; i++)
+    {
+        printf("%d ", vetor_numeros[i]);
+    }
+
+    return 0;
+}
