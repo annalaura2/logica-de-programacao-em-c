@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+/*. Faça um programa que leia 10 números do usuário e armazene-os em um
+vetor. Imprima a quantidade de números pares e números ímpares. Utilizar
+laço for.*/
+
+int main()
+{
+    int contPares, contImpares, i, numeros[10];
+
+    contImpares = 0;
+    contPares = 0;
+
+    for (i = 0; i < 10; i++)
+    {
+        printf("Informe o numero\n");
+        scanf("%d", &numeros[i]);
+
+        if (numeros[i] % 2 == 0)
+        {
+            contPares++;
+        }
+        else
+        {
+            contImpares++;
+        }
+    }
+
+    printf("PARES: %d\n", contPares);
+    printf("IMPARES: %d\n", contImpares);
+}
