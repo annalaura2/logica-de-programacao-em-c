@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+/*1. Faça um programa que realize a soma dos elementos de dois vetores e armazene o
+resultado em um terceiro vetor. Utilize um laço de repetição for para realizar a soma
+e imprimir o vetor de soma no final do programa:
+O resultado da soma 1 e: 85
+…
+O resultado da soma 10 e: 7*/
+
+int main()
+{
+    int vetor1[] = {1, 2, 3, 4};
+    int vetor2[] = {5, 6, 2, 5};
+    int i, soma[4];
+
+    i = 0;
+    for (i = 0; i < 4; i++)
+    {
+        soma[i] = vetor1[i] + vetor2[i];
+    }
+
+    for (i = 0; i < 4; i++)
+    {
+        printf("Resultado da soma %d e: %d\n", i + 1, soma[i]);
+    }
+
+    return 0;
+}
