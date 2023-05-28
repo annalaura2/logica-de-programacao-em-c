@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+/*Faça um programa que leia o nome de cinco pessoas e armazene-os em um vetor,
+em seguida, a leitura da idade deve ser feita também. Por fim, imprima as pessoas
+com suas respectivas idades na ordem do mais novo para o mais velho*/
+
+int main()
+{
+    char nome[5][20];
+    int i, j, idade[5], indices[5];
+
+    for (i = 0; i < 5; i++)
+    {
+        printf("Nome: ");
+        scanf(" %s", nome[i]);
+
+        printf("Idade: ");
+        scanf("%d", &idade[i]);
+    }
+
+    for (i = 0; i < 5; i++)
+    {
+        indices[i] = i; // os índices servem para armazenas a idade e deixar no vetor somente os nomes
+    }
+
+    for (j = i + 1; j < 5; j++)
+    {
+        if (idade[j] > idade[i])
+        {
+            int temp = idade[i];
+            idade[i] = idade[j];
+            idade[j] = temp;
+
+            temp = indices[i];
+            indices[i] = indices[j];
+            indices[j] = temp;
+        }
+    }
+
+    for (i = 4; i >= 0; i--)
+    {
+        printf("Nome: %s\n", nome[indices[i]]);
+        printf("Idade: %d\n", idade[i]);
+    }
+}
