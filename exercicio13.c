@@ -5,27 +5,31 @@ tram o maior e o menor valor*/
 
 int main()
 {
-    int numeros[5], i, menor, maior, posicaoMenor, posicaoMaior;
+    int valores[5], menorValor, i, posicaoMenorValor, maiorValor, posicaoDoMaiorValor;
 
-    menor = 9999;
-    maior = -999;
     for (i = 0; i <= 4; i++)
     {
         printf("Informe o numero:\n");
-        scanf("%f", &numeros[i]);
+        scanf("%d", &valores[i]);
 
-        if (numeros[i] > maior)
+        if (i == 0)
         {
-            maior = numeros[i];
-            posicaoMaior = i;
+            menorValor = valores[i];
+            maiorValor = valores[i];
         }
 
-        if (numeros[i] < menor)
+        if (menorValor > valores[i])
         {
-            menor = numeros[i];
-            posicaoMenor = i;
+            menorValor = valores[i];
+            posicaoMenorValor = i;
+        }
+
+        if (valores[i] > maiorValor)
+        {
+            maiorValor = valores[i];
+            posicaoDoMaiorValor = i;
         }
     }
 
-    printf("Posicao do maior valor: %d\nPosicao do menor valor: %d\n", posicaoMaior, posicaoMenor);
+    printf("Posicao do menor: %d\nPosicao do maior valor: %d\n", posicaoMenorValor, posicaoDoMaiorValor);
 }
